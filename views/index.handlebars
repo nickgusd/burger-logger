@@ -1,18 +1,18 @@
 <h1>Eat-Da-Burger</h1>
 
 <ul>
-  {{#each cats}}
+  {{#each burgers}}
     {{#unless devoured}}
-      {{> cats/cat-block devoured=true}}
+      {{> devour-burger devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
 
 
 <ul>
-  {{#each cats}}
+  {{#each burgers}}
     {{#if devoured}}
-      {{> cats/cat-block devoured=false}}
+      {{> devour-burger devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
