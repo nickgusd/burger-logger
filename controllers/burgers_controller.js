@@ -7,6 +7,7 @@ var burger = require("../models/burger.js")
 //creating routes and setting up logic
 router.get("/", function(req, res) {
     burger.all(function(data) {
+        console.log(data[0])
       var hbsObject = {
         burgers: data
       };
@@ -31,7 +32,7 @@ router.get("/", function(req, res) {
     console.log("condition", condition);
   
     burger.update({
-      sleepy: req.body.sleepy
+      devoured: req.body.devoured
     }, condition, function(result) {
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404

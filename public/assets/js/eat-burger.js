@@ -8,6 +8,9 @@ $(document).ready(function() {
         console.log(newBurger)
         
 
+
+
+
     // Send the POST request.
     $.ajax("/api/burgers", {
         type: "POST",
@@ -20,6 +23,30 @@ $(document).ready(function() {
         }
       );
     })
+
+
+
+    $(".devour-button").on("click", function(event) {
+        var id = $(this).data("id")
+      var newBurger = {
+          devoured: true
+      }
+      console.log("hello")
+      $.ajax("/api/burgers/" + id, {
+          type: "PUT",
+          data: newBurger
+        }).then(
+          function() {
+            console.log("devoured burger!");
+            // Reload the page to get the updated list
+            
+          }
+        );
+  
+    })
+
+
+
 
     // $(".delete-burger").on("click", function(event) {
     //     var id = $(this).data("id");
