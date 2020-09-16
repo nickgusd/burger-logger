@@ -4,7 +4,7 @@ $(document).ready(function() {
         var newBurger = {
             burger_name: $("#burger").val().trim()
         }
-        ;
+        
         console.log(newBurger)
         
 
@@ -21,7 +21,6 @@ $(document).ready(function() {
         }
       );
     })
-
 
 
     $(".devour-button").on("click", function(event) {
@@ -42,8 +41,6 @@ $(document).ready(function() {
         );
   
     })
-
-
 
 
 })
