@@ -32,3 +32,7 @@ label {
     margin: 10px;
 }
 
+.burger-img {
+    transform: scale(.6);
+}
+
